@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+  <body>
+
+    <form onsubmit="BMI();return false">
+        <div>
+            <div>
+            <label for="weight">weight</label>
+        </div>
+        <input type="number" name="weight" id="weight">
+        </div>
+
+       
+
+        <div>
+            <div>
+            <label for="height">height</label>
+        </div>
+        <input type="number" name="height" id="height">
+        </div>
+
+            <button type="submit">BMI calculate</button>
+
+
+    </form>
+
+    <div id="result">  </div>
+  </body>
+
+    <script>
+      
+      function BMI()
+      {
+        const weightRef=document.getElementById("weight")
+      const heightRef=document.getElementById("height")
+      console.log(weightRef.value)
+          console.log(heightRef.value)
+
+          const weight=Number(weightRef.value)
+          const height=Number(heightRef.value)
+
+          const bmi=(weight/(height**2));
+          resultDivRef=document.getElementById("result");
+          resultDivRef.textContent=bmi;
+
+      }
+
+      
+        
+
+    </script>
+</body>
+</html>
